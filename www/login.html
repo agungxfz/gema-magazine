@@ -1,0 +1,132 @@
+<style type="text/css">
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+
+.styled-select.slate {
+   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+   height: 34px;
+   width: 240px;
+}
+
+.styled-select.slate select {
+   border: 1px solid #ccc;
+   font-size: 16px;
+   height: 34px;
+   width: 268px;
+}
+
+.semi-square {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+.blue    { background-color: #3b8ec2; }
+.blue select    { color: #fff; }
+
+</style>
+
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"></div>
+        <!-- <div class="center sliding">Login to Gema</div> -->
+        <div class="center sliding"></div>        
+        <div class="right"></div>
+    </div>
+</div>
+<div data-page="login" class="page">
+    <div class="page-content">
+        <!-- <div class="content-block-title" style="text-align: center;">Gema Petrokimia</div> -->
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-100">
+                <div class="media-item">
+                    <img src="img/Gema.png" width="320">
+                </div>
+            </div>
+        </div>
+        <div class="content-block">
+            <div class="content-block">
+                <form name="loginvisitor" id="loginvisitor" class="list-block">
+                    <div>
+                        <input type="text" placeholder="Username" id="username" style="background-color: white; border-radius: 15px; text-align: center;">
+                    </div>
+                    <div style="margin-top: 10px">
+                        <input type="Password" placeholder="Password" id="password" style="background-color: white; border-radius: 15px; text-align: center;">
+                    </div>
+                    <div style="margin-top: 10px">
+                        <div class="row">
+                            <div class="col-20"></div>
+                            <div class="col-60"><a href="#" class="button button-fill color-green" id="btn_login">Login</a></div>
+                            <div class="col-20"></div>
+                        </div>                        
+                    </div>
+                </form>
+            </div>
+            <!-- <div class="buttons-row">
+              Link to Visitor tab, active
+              <a href="#tab1" class="tab-link active button color-green">Visitor</a>
+              Link to Internal tab
+              <a href="#tab2" class="tab-link button color-green">Internal</a>
+            </div> -->
+            
+            <!-- <div class="tabs">
+                Visitor, active by default
+                <div id="tab1" class="tab active">
+                  <div class="content-block">
+                    <form name="loginvisitor" id="loginvisitor" class="list-block">
+                        <div>
+                            <input type="text" placeholder="Username" id="username" style="background-color: white; border-radius: 15px; text-align: center;">
+                        </div>
+                        <div style="margin-top: 10px">
+                            <input type="Password" placeholder="Password" id="password" style="background-color: white; border-radius: 15px; text-align: center;">
+                        </div>
+                        <div style="margin-top: 10px">
+                            <a href="#" class="button button-fill color-green" id="btn_login">Login</a>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+                Internal
+                <div id="tab2" class="tab">
+                  <div class="content-block">
+                    <form name="logininternal" id="logininternal" class="list-block">
+                        <div>
+                            <input type="text" placeholder="Username" id="usernameint" style="background-color: white; border-radius: 15px; text-align: center;">
+                        </div>
+                        <div style="margin-top: 10px">
+                            <input type="Password" placeholder="Password" id="passwordint" style="background-color: white; border-radius: 15px; text-align: center;">
+                        </div>
+                        <div style="margin-top: 10px">
+                            <a href="#" class="button button-fill color-green" id="btn_login_internal">Login</a>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="item-content">
+            <div class="item-inner">
+                <center>
+                    <p><a href="forgot-password.html" style="color: black;">Forgot your password?</a></p>
+                    <p><a href="register.html" style="color: black;"> Don't have account, need to sign up?</a></p>
+                </center>
+            </div>
+        </div>
+
+    </div>
+</div>

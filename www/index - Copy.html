@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>Gema</title>
+        <link rel="stylesheet" href="css/framework7.ios.min.css">
+        <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/kitchen-sink.css">
+        <link rel="stylesheet" href="css/my-app.css">
+        <link rel="stylesheet" href="css/framework7-icons.css">
+        <style type="text/css">
+            ::-webkit-input-placeholder {
+                text-align: center;
+            }
+
+            :-moz-placeholder { /* Firefox 18- */
+               text-align: center;  
+            }
+
+            ::-moz-placeholder {  /* Firefox 19+ */
+               text-align: center;  
+            }
+
+            :-ms-input-placeholder {  
+               text-align: center; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="statusbar-overlay"></div>
+        <div class="panel-overlay"></div>
+        <div class="panel panel-left panel-reveal">
+            <div class="view view-left navbar-through">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left"></div>
+                        <div class="center sliding">Gema User Menu</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="pages">
+                    <div data-page="index-left" class="page">
+                        <div class="page-content">
+                            <!--<div class="content-block-title"></div>-->
+                            <div class="list-block">
+                                <ul>
+<!--                                    <li>
+                                        <a href="home.html" class="item-link close-panel" id="btnmyhome">
+                                            <div class="item-content"> 
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">home</i></span>&nbsp;&nbsp;&nbsp;Home</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>-->
+                                    <li>
+                                        <a href="home.html" data-page=".view-main" class="item-link close-panel">
+                                            <div class="item-content"> 
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">home</i></span>&nbsp;&nbsp;&nbsp;Home</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li id="getprofile">
+                                        <a href="profile.html" class="item-link close-panel">
+                                            <div class="item-content"> 
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">person</i></span>&nbsp;&nbsp;&nbsp;Account</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="setting.html" class="item-link close-panel">
+                                            <div class="item-content"> 
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">gear</i></span>&nbsp;&nbsp;&nbsp;Setting</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li> -->
+                                    <li>
+                                        <a href="edisi.html" class="item-link close-panel">
+                                            <div class="item-content"> 
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">book</i></span>&nbsp;&nbsp;&nbsp;Edisi</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="video.html" class="item-link close-panel">
+                                            <div class="item-content"> 
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">play_round</i></span>&nbsp;&nbsp;&nbsp;Videos</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li> -->
+                                    <!-- <li>
+                                        <a href="search.html" class="item-link close-panel">
+                                            <div class="item-content"> 
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">search</i></span>&nbsp;&nbsp;&nbsp;Search</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li> -->
+                                    <li>
+                                        <a href="about.html" class="item-link close-panel">
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">info</i></span>&nbsp;&nbsp;&nbsp;About</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="tutup_apps">
+                                        <a class="item-link close-panel">
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">logout</i></span>&nbsp;&nbsp;&nbsp;Logout</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-right panel-reveal">
+        <div class="view view-init view-right" name="right" data-url="/">
+            <div class="page">
+                <div class="navbar">
+                    <div class="navbar-inner sliding">
+                        <div class="title">Right Panel</div>
+                    </div>
+                </div>
+                <div class="page-content">
+                <div class="block">
+                    <p>This is a right side panel. You can close it by clicking outsite or on this link: <a href="#" class="panel-close">close me</a>. You can put here anything, even another isolated view.</p>
+                </div>
+                <div class="block-title">Panel Navigation</div>
+                <div class="list links-list">
+                    <ul>
+                        <li><a href="/panel-right-1/">Right panel page 1</a></li>
+                        <li><a href="/panel-right-2/">Right panel page 2</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="views navbar-through">
+            <div class="view view-main">
+                <!-- <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" data-panel="left" class="link open-panel icon-only" style="background-color: white;"><i class="icon icon-bars"></i></a>
+                        </div>
+                        <div class="center sliding">Home</div>
+                        <div class="right">
+                            <span><i class="f7-icons size-50">person</i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pages">
+                    <div data-page="home" class="page">
+                        <div class="page-content pull-to-refresh-content" data-ptr-distance="55">
+                            <div class="pull-to-refresh-layer">
+                                <div class="preloader"></div>
+                                <div class="pull-to-refresh-arrow"></div>
+                            </div>
+                            <div class="ks-slider-custom" style="height: 200px">
+                                <div data-pagination=".swiper-pagination" data-space-between="0" data-next-button=".swiper-button-next" data-prev-button=".swiper-button-prev" data-pagination-clickable="true" class="swiper-container swiper-init">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-wrapper" id="home_slider">
+                                        <script src="js/jquery-1.10.2.js"></script>
+                                        <div style="background-image:url(http://gema-petro.com/FOTO/3-SMALL.jpg)" class="swiper-slide"></div>
+                                        <div style="background-image:url(http://gema-petro.com/FOTO/2-SMALL.jpg)" class="swiper-slide"></div>
+                                        <div style="background-image:url(http://gema-petro.com/FOTO/6-SMALL.jpg)" class="swiper-slide"></div>
+                                        <div style="background-image:url(http://gema-petro.com/FOTO/7-SMALL.jpg)" class="swiper-slide"></div>
+                                        <div style="background-image:url(http://gema-petro.com/FOTO/8-SMALL.jpg)" class="swiper-slide"></div>
+                                        <div style="background-image:url(http://gema-petro.com/FOTO/9-SMALL.jpg)" class="swiper-slide"></div>
+                                        <div style="background-image:url(http://gema-petro.com/FOTO/15-SMALL.jpg)" class="swiper-slide"></div>
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="content-block-title">Latest Video</div>
+                            <div class="ks-slider-custom" style="height: 200px">
+                                <div data-pagination=".swiper-pagination" data-space-between="0" data-next-button=".swiper-button-next" data-prev-button=".swiper-button-prev" data-pagination-clickable="true" class="swiper-container swiper-init">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="content-block-title">No Video Available</div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-block-title">No Video Available</div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="content-block-title">No Video Available</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="content-block-title">Articles</div>
+                            <div class="list-block cards-list">
+                                <ul id="list_selected_edisi">
+                                    <script src="js/jquery-1.10.2.js"></script>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" data-panel="left" class="link open-panel icon-only" style="background-color: white;"><i class="icon icon-bars"></i></a>
+                        </div>
+                        <div class="center sliding">Pilih Edisi Berita</div>
+                        <div class="right">
+                            <span><i class="f7-icons size-50">person</i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pages">
+                    <div data-page="index-edisi" class="page">
+                        <div class="page-content pull-to-refresh-content ptr-index" data-ptr-distance="55">
+                            <div class="pull-to-refresh-layer">
+                                <div class="preloader"></div>
+                                <div class="pull-to-refresh-arrow"></div>
+                            </div>
+
+                            <div class="row" style="margin-top: 15px;">
+                                <div class="col-30 item-title label">Edisi</div>
+                                <div class="col-35" class="item-input">
+                                    <select name="tahun_edisi" id="tahun_edisi" class="" style="width: 100%;">
+                                        <!-- <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option> -->
+                                    </select>
+                                </div>
+                                <div class="col-35">
+                                    <select name="bulan_edisi" id="bulan_edisi" class="" style="width: 100%;">
+                                       <!--  <option value="01">January</option>
+                                        <option value="02">February</option>
+                                        <option value="03">March</option>
+                                        <option value="04">April</option>
+                                        <option value="05">May</option>
+                                        <option value="06">June</option>
+                                        <option value="07">July</option>
+                                        <option value="08">August</option>
+                                        <option value="09">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option> -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="content-block-title" style="display: none;">Berita Edisi Tahun : <span id="selected_tahun"></span></div>
+                            <div class="ks-grid">
+                                <div class="content-block">
+                                    <script src="js/jquery-1.10.2.js"></script>
+                                    <div class="row no-gutter" id="list_edisi">
+                                    </div>
+
+                                    <!-- <div class="row">
+                                        <div class="col-50" style="background-color: #d7ffe3;"></div>
+                                        <div class="col-50"><a class="button button-big button-fill tutup_apps color-green">Read</a></div>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script type="text/javascript" src="js/framework7.min.js"></script>
+        <script type="text/javascript" src="js/my-app.js"></script>
+        <!--<script type="text/javascript" src="js/cordova.js"></script>--> 
+    </body>
+</html>

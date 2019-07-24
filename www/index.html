@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>Gema</title>
+        <link rel="stylesheet" href="css/framework7.ios.min.css">
+        <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/kitchen-sink.css">
+        <link rel="stylesheet" href="css/my-app.css">
+        <link rel="stylesheet" href="css/framework7-icons.css">        
+        <!--script type="text/javascript" src="cordova.js"></script-->
+		<style type="text/css">
+			/* select style */
+			.styled-select > option {
+			  /*background: rgba(16, 215, 0, 1);*/
+              background-color: #006547;
+			}
+            .styled-select {
+			   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+			   height: 29px;
+			   overflow: hidden;
+			   /*width: 240px;*/
+			   width: 110px;
+			}
+
+			.styled-select select {
+			   background: transparent;
+			   border: none;
+			   font-size: 14px;
+			   height: 29px;
+			   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+			   width: 130px;
+			}
+
+			.styled-select.slate {
+			   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+			   height: 34px;
+			   /* width: 240px;*/
+			   width: 110px;
+			}
+
+			.styled-select.slate select {
+			   border: 1px solid #ccc;
+			   font-size: 16px;
+			   height: 34px;
+			   width: 130px;
+			}
+
+			.semi-square {
+			   -webkit-border-radius: 5px;
+			   -moz-border-radius: 5px;
+			   border-radius: 0px;
+			}
+
+			.blue { 
+				/*background-color: rgba(16, 215, 0, 1); */
+                background-color: #006547;
+			}
+			.blue select    { color: #fff; }
+			/* select style */
+			
+			
+            .flooter {
+                /*background: red;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 50px;*/
+                /*background-color: rgba(255,255,255,0.35);*/
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 53px;
+				z-index:9;
+            }   
+
+            .selecttemplate {
+                right: 30px;
+                bottom: 30px;
+                position: absolute;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="statusbar-overlay"></div>
+        <div class="panel-overlay"></div>
+        <div class="panel panel-left panel-reveal">
+            <div class="view view-left navbar-through">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left"></div>
+                        <div class="center sliding"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="pages">
+                    <div data-page="index-left" class="page">
+                        <div class="page-content">
+							&nbsp;&nbsp;&nbsp;
+                            <div class="col-100">
+                                <span id="nama_user_sdbar" style="font-family:Tw Cen MT; font-size:22px; font-weight:bold;"></span>
+                                <br>
+                                <div class="media-item">
+                                    <img id="img_user_sdbar" src="img/man.png" onerror="this.src=\'img/man.png\'" width="120" style="border-radius:100%;">
+                                </div>
+                            </div>
+                            <div class="list-block">
+                                <ul>
+                                    <li class="gotohomearticle" id="gotohomearticle">
+                                        <a id="homegae" href="home.html" data-page=".view-main" class="item-link close-panel">
+                                            <div class="item-content"> 
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">home</i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home<br/></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="getprofileuser" id="getprofileuser">
+                                        <a href="profile.html" class="item-link close-panel">
+                                            <div class="item-content"> 
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">person</i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="getnewsedition" id="getnewsedition">
+                                        <a href="edisi.html" class="item-link close-panel">
+                                            <div class="item-content"> 
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">book</i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edisi</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- <li class="serachedition" id="getnewsedition">
+                                        <a href="search.html" class="item-link close-panel">
+                                            <div class="item-content"> 
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">search</i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search Article</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li> -->
+                                    <li class="getaboutapp" id="getaboutapp">
+                                        <a href="about.html" class="item-link close-panel">
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">info</i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="tutup_apps" id="tutup_apps">
+                                        <a class="item-link close-panel">
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title"><span><i class="f7-icons size-50">logout</i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-right panel-reveal">
+            <div class="view view-right navbar-through">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left"></div>
+                        <div class="center sliding" id="rightPanelTittle">Gema Sort & Filter</div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="pages">
+                    <div data-page="index-right" class="page">
+                        <div class="page-content">
+                            <div id="actSort" style="display: none;">
+                                <div class="list-block">
+                                    <ul>
+                                        <li id="newest">
+                                            <label class="label-radio item-content">
+                                            <!-- Checked by default -->
+                                                <input type="radio" name="sortarticle[]" value="Newest" checked="checked">
+                                                <div class="item-media">
+                                                    <i class="icon icon-form-radio"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">Newest</div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li id="popular">
+                                            <label class="label-radio item-content">
+                                            <!-- Checked by default -->
+                                                <input type="radio" name="sortarticle[]" value="Popular">
+                                                <div class="item-media">
+                                                    <i class="icon icon-form-radio"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">Popular</div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li id="visited">
+                                            <label class="label-radio item-content">
+                                                <input type="radio" name="sortarticle[]" value="Most Viewed">
+                                                <div class="item-media">
+                                                    <i class="icon icon-form-radio"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">Most Viewed</div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div> 
+                            </div>
+
+                            <div id="actFilter" style="display: none;">
+                                <!-- <h3 align = "center">Filter : </h3> -->
+                                <div class="content-block-title">Hashtag</div>
+                                <div class="list-block">
+                                    <ul id="listfilterhashtag">
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-input">
+                                                        <textarea placeholder="Ex : #example,#article,#video" id="selected_hashtag"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div> 
+                                <div class="content-block-title">Jenis</div>
+                                <div class="list-block">
+                                    <ul id="listfilterjenis">
+                                        <li>
+                                            <label class="label-radio item-content">
+                                            <!-- Checked by default -->
+                                                <input type="radio" name="listjenis[]" value="1" checked="checked">
+                                                <div class="item-media">
+                                                    <i class="icon icon-form-radio"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">Article</div>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="label-radio item-content">
+                                            <!-- Checked by default -->
+                                                <input type="radio" name="listjenis[]" value="2">
+                                                <div class="item-media">
+                                                    <i class="icon icon-form-radio"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">Video</div>
+                                                </div>
+                                            </label>
+                                        </li>                                    
+                                    </ul>
+                                </div>
+                                <div class="content-block-title">Kategori</div>
+                                <div class="list-block">
+                                    <ul id="listfilterkategori">
+                                    </ul>
+                                </div>    
+                                <div class="content-block">
+                                    <div style="margin-top: 10px">
+                                        <a href="#" class="button button-fill color-green" id="btn-search-art">Apply Filter</a>
+                                    </div>
+                                </div>  
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="views navbar-through">
+            <div class="view view-main">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <!-- <div class="left">
+                            <div class="styled-select blue semi-square">
+                                <select
+                                        name="tahun_edisi" 
+                                        id="tahun_edisi" 
+                                        onchange="setmonth()" 
+                                        class=""
+                                        width="100%">
+                                </select>
+                            </div>          
+                        </div>
+                        <div class="right">
+                            <div class="styled-select blue semi-square">
+                                <select 
+                                        name="bulan_edisi" 
+                                        id="bulan_edisi" 
+                                        onchange="setedisi()" 
+                                        class="" 
+                                        style="width: 120%;">
+                                </select>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+                <div class="pages">
+                    <div data-page="index-edisi" class="page">
+                        <div class="page-content edisi-bg" style="background-image: url('img/nocover.jpg'), url('img/nocover.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%; width: 100%;">
+
+
+                        <div class="styled-select blue semi-square" style="position: absolute; top: 5px; left: 5px;">
+                            <select
+                                    name="tahun_edisi" 
+                                    id="tahun_edisi" 
+                                    onchange="setmonth()" 
+                                    class=""
+                                    width="100%">
+                            </select>
+                        </div>     
+                        <div class="styled-select blue semi-square" style="position: absolute; top: 5px; right: 5px;">
+                            <select 
+                                    name="bulan_edisi" 
+                                    id="bulan_edisi" 
+                                    onchange="setedisi()" 
+                                    class="" 
+                                    style="width: 120%;">
+                            </select>
+                        </div>
+
+                            <div class="content-block">
+                                <div class="content-block-title" style="display: none;">Berita Edisi Tahun : <span id="selected_tahun"></span></div>
+                                <div class="ks-grid">
+                                    <div class="content-block">
+                                        <script src="js/jquery-1.10.2.js"></script>
+                                        <div class="row no-gutter" id="list_edisi">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script type="text/javascript" src="js/framework7.min.js"></script>
+        <script type="text/javascript" src="js/my-app.js"></script>
+    </body>
+</html>

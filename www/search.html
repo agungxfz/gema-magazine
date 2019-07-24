@@ -1,0 +1,45 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" data-panel="left" class="link open-panel icon-only"><img src="img/menu-icon.png" style="width: 35px;"></a>
+        </div>
+        <div class="center sliding"></div>
+        <div class="right">
+            <!-- <a href="#" data-panel="right" class="link open-panel icon-only panel-right-sort-filter" ><img src="img/search.png" style="width: 25px;"></a> -->
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <div data-page="search" class="page">
+        <!-- <form data-search-list=".search-here" data-search-in=".item-title" class="searchbar searchbar-init"> -->
+        <form class="searchbar searchbar-init">
+            <div class="searchbar-input">
+                <input id="inputsearch" class="inputsearch" onchange="seararticl()" type="search" placeholder="Search"/><a href="#" class="searchbar-clear"></a>
+            </div><a href="#" class="searchbar-cancel">Cancel</a>
+        </form>
+        <div class="searchbar-overlay"></div>
+        <div class="page-content">
+            <div class="list-block searchbar-not-found">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">Nothing found</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-block search-here searchbar-found">
+                <!-- <div id="" class="list-block">
+                    <ul id="list_judul">
+                    </ul>
+                </div> -->
+
+
+                <div class="row" id="listsearchart" style="margin-bottom: 50px;">
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

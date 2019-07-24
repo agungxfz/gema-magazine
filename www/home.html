@@ -1,0 +1,79 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" data-panel="left" class="link open-panel icon-only"><img src="img/menu-icon.png" style="width: 35px;"></a>
+        </div>
+        <!-- <div class="center sliding">
+            <form class="searchbar searchbar-init">
+                <div class="searchbar-input">
+                    <input id="inputsearch" class="inputsearch" onchange="seararticl()" type="search" placeholder="Search"/><a href="#" class="searchbar-clear"></a>
+                </div><a href="#" class="searchbar-cancel">Cancel</a>
+            </form>
+        </div> -->
+        <form id="seacrhbarfitur" class="searchbar searchbar-init" style="background: rgba(0,0,0,0) !important;">
+                <div class="searchbar-input">
+                    <input id="inputsearch" class="inputsearch" onchange="seararticl()" type="search" placeholder="Search"/><a href="#" class="searchbar-clear"></a>
+                </div><a id="searchbar-cancel" class="searchbar-cancel">Cancel</a>
+            </form>
+        <!-- <div class="right"> -->
+            <!-- <a href="#" data-panel="right" class="link open-panel icon-only panel-right-sort-filter" ><img src="img/search.png" style="width: 25px;"></a> -->
+        <!-- </div> -->
+    </div>
+</div>
+<div class="pages">
+    <div data-page="about" class="page">
+        <div class="page-content">
+            <!-- <div class="content-block"> -->
+
+                <!-- <div class = "swiper-container">
+                   <div class = "swiper-wrapper">
+                      <div class = "swiper-slide">Slide 1</div>
+                      <div class = "swiper-slide">Slide 2</div>
+                      <div class = "swiper-slide">Slide 3</div>
+                   </div>
+                   <div class = "swiper-pagination"></div>
+                </div> -->
+				<script src="js/jquery-1.10.2.js"></script>
+                <div class="ks-slider-custom" style="height: 360px">
+                    <div style = "height:350px;" class="swiper-container" id="slider_home">
+						<div class="swiper-pagination"></div>
+						<div class="swiper-wrapper" id="home_image_slider"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+
+                <div id="video_list" style="display: none;">
+                    <div class="content-block-title">Latest Video</div>
+                    <div class="card demo-facebook-card" id="video_highlight">                        
+                        <!-- <div class="card-content card-content-padding">
+                            <video width="100%" src="http://www.w3schools.com/html/mov_bbb.mp4" controls>
+                                <source src="movie.mp4" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                            </video>
+                        </div>
+                        <div class="card-footer"><a href="#" class="link" style="color: black; text-decoration: none; text-decoration-color: black;">What a nice photo i took yesterday!</a></div> -->
+                    </div>
+                </div>
+
+                <div class="row" id="list_selected_edisi" style="margin-bottom: 50px;">
+                    <span></span>
+                </div>
+
+                <!-- <div class="row" id="list_selected_edisi-2" style="margin-bottom: 50px;">                    
+                    <span></span>
+                </div> -->
+
+
+            
+
+            <!-- </div> -->
+        </div>
+		<div class="flooter">
+		  <div class="row">
+			<div class="col-50 right"><a style="border-radius:0px;" id="BtnSort" onclick="OpenPanelSort()" data-panel="right" class="link open-panel icon-only panel-right-sort-filter button button-big button-fill color-green" ><img src = 'img/sort.png' width = '15px' height = '15px'> Sort</a></div>
+			<div class="col-50 right"><a style="border-radius:0px;" id="BtnFilt" onclick="OpenPanelFilter()" data-panel="right" class="link open-panel icon-only panel-right-sort-filter button button-big button-fill color-green" ><img src = 'img/filter.png' width = '15px' height = '15px'> Filter</a></div>
+		  </div>
+		</div>
+    </div>
+</div>

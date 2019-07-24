@@ -1,0 +1,108 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <!-- <div class="left">
+			<div class="styled-select blue semi-square">
+				<select
+						name="pilih_tahun_edisi" 
+						id="pilih_tahun_edisi" 
+						onchange="setmonth()" 
+						class=""
+						width="100%">
+				</select>
+			</div>			
+        </div>
+        <div class="right">
+			<div class="styled-select blue semi-square">
+				<select 
+						name="pilih_bulan_edisi" 
+						id="pilih_bulan_edisi" 
+						onchange="setedisi()" 
+						class="" 
+						style="width: 120%;">
+				</select>
+			</div>
+        </div> -->
+    </div>
+</div>
+<div class="pages">
+    <div data-page="about" class="page">
+        <div class="page-content edisi-bg" style="background-image: url('img/nocover.jpg'), url('img/nocover.jpg');; background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%; width: 100%;">
+
+            <div class="styled-select blue semi-square" style="position: absolute; top: 5px; left: 5px;">
+                <select
+                        name="pilih_tahun_edisi" 
+                        id="pilih_tahun_edisi" 
+                        onchange="setmonth()" 
+                        class=""
+                        width="100%">
+                </select>
+            </div>     
+            <div class="styled-select blue semi-square" style="position: absolute; top: 5px; right: 5px;">
+                <select 
+                        name="pilih_bulan_edisi" 
+                        id="pilih_bulan_edisi" 
+                        onchange="setedisi()" 
+                        class="" 
+                        style="width: 120%;">
+                </select>
+            </div>
+
+            <div class="content-block">
+                <div class="row" style="margin-top: 15px;">
+                    <!-- <div class="col-30 item-title label">Edisi 2</div> -->
+                    <!-- <div class="col-35" class="item-input">
+                        <select style = "
+									width: 100%;
+									/*! width: 100%; */
+									border-radius: 5px;/*! 
+									border-color: #43d93a; */
+									padding: 4px 4px 4px 23px;
+									color: darkgray;
+									font-size: 15px;
+									font-weight: bold;
+									font-family: Tw Cen MT;
+									/*! background-color: #9fff9e; */
+									/*! background: url(http://www.stackoverflow.com/favicon.ico) 76% / 25% no-repeat #eee; */
+									-webkit-appearance: none;" 
+								name="pilih_tahun_edisi" 
+								id="pilih_tahun_edisi" 
+								onchange="setmonth()" 
+								class=""
+								width="100%">
+                        </select>
+                    </div>
+                    <div class="col-35">
+                        <select style = "
+									width: 100%;
+									/*! width: 100%; */
+									border-radius: 5px;/*! 
+									border-color: #43d93a; */
+									padding: 4px 4px 4px 23px;
+									color: darkgray;
+									font-size: 15px;
+									font-weight: bold;
+									font-family: Tw Cen MT;
+									/*! background-color: #9fff9e; */
+									/*! background: url(http://www.stackoverflow.com/favicon.ico) 76% / 25% no-repeat #eee; */
+									-webkit-appearance: none;" 
+								name="pilih_bulan_edisi" 
+								id="pilih_bulan_edisi" 
+								onchange="setedisi()" 
+								class="" 
+								style="width: 100%;">
+                        </select>
+                    </div> -->
+                </div>
+                <div class="content-block-title" style="display: none;">Berita Edisi Tahun : <span id="selected_tahun_edisi"></span></div>
+                <div class="ks-grid">
+                    <div class="content-block">
+                        <script src="js/jquery-1.10.2.js"></script>
+                        <div class="row no-gutter" id="pilih_list_edisi">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	
